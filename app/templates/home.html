@@ -20,6 +20,12 @@
     <h1>DLQ Manager</h1>
     <div class="row">
         <div class="col-sm">
+            <button type="button" class="btn btn-primary float-right" style="margin-bottom: 10px">Retry all <span
+                    class="badge badge-light">{{ collection.count() }}</span></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
             <div class="list-group">
                 {% for item in collection.find() %}
                     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -38,43 +44,24 @@
                         </div>
                     </a>
                 {% endfor %}
-            {#<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">An exception occurred due to a failed request</h5>
-                            <small>2 minutes ago</small>
-                        </div>
-                        <p class="mb-1">
-                            {"update_type":"update_carton_location","source":"wayscan","sscc_number":"001955551078509233",
-                            "shipping_load_manifest_id":null,"scan_location":"MCI0301","scan_unix_timestamp":1601913334, ...
-                        </p>
-                        <div class="d-flex w-100 justify-content-between">
-                            <small>trns_shipment</small>
-                            <div>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-media-play"></button>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-pencil"></button>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-trash"></button>
-                            </div>
-                        </div>
-                    </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Error at HTTP request.</h5>
-                            <small>5 minutes ago</small>
-                        </div>
-                        <p class="mb-1">
-                            {"sscc_number":"001955551049697204","scan_location":"BLK-03","scan_unix_timestamp":1601911868,
-                            "timestamp":"2020-10-05T08:31:08.920000-07:00","published_timestamp":"2020-10-05T11:31:09. ...
-                        </p>
-                        <div class="d-flex w-100 justify-content-between">
-                            <small>trns_shipment</small>
-                            <div>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-media-play"></button>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-pencil"></button>
-                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-trash"></button>
-                            </div>
-                        </div>
-                    </a>#}
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
