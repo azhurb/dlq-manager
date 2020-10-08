@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+          integrity="sha512-UyNhw5RNpQaCai2EdC+Js0QL4RlVmiq41DkmCJsRV3ZxipG2L0HhTqIf/H9Hp8ez2EnFlkBnjRGJU2stW3Lj+w=="
+          crossorigin="anonymous"/>
+    <title>DLQ Manager</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>DLQ Manager</h1>
+    <div class="row">
+        <div class="col-sm">
+            <div class="list-group">
+                {% for item in collection.find() %}
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">List group item heading</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">{{ item }}</p>
+                        <div class="d-flex w-100 justify-content-between">
+                            <small>Donec id elit non mi porta.</small>
+                            <div>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-media-play"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-pencil"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-trash"></button>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            {#<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">An exception occurred due to a failed request</h5>
+                            <small>2 minutes ago</small>
+                        </div>
+                        <p class="mb-1">
+                            {"update_type":"update_carton_location","source":"wayscan","sscc_number":"001955551078509233",
+                            "shipping_load_manifest_id":null,"scan_location":"MCI0301","scan_unix_timestamp":1601913334, ...
+                        </p>
+                        <div class="d-flex w-100 justify-content-between">
+                            <small>trns_shipment</small>
+                            <div>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-media-play"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-pencil"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-trash"></button>
+                            </div>
+                        </div>
+                    </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Error at HTTP request.</h5>
+                            <small>5 minutes ago</small>
+                        </div>
+                        <p class="mb-1">
+                            {"sscc_number":"001955551049697204","scan_location":"BLK-03","scan_unix_timestamp":1601911868,
+                            "timestamp":"2020-10-05T08:31:08.920000-07:00","published_timestamp":"2020-10-05T11:31:09. ...
+                        </p>
+                        <div class="d-flex w-100 justify-content-between">
+                            <small>trns_shipment</small>
+                            <div>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-media-play"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-pencil"></button>
+                                <button type="button" class="btn btn-sm btn-light btn-sm oi oi-trash"></button>
+                            </div>
+                        </div>
+                    </a>#}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
